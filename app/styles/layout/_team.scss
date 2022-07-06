@@ -1,0 +1,107 @@
+.team{
+    @include hoverEffect(".team-main", ".team-content");
+    --heigh-image : 47rem;
+    padding: 10rem 0 11rem;
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        margin-top: 9rem;
+    }
+    &-item{
+        height: 100%;
+    }
+    &-media{
+        height: var(--heigh-image);
+    }
+    &-image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &-social{
+        display: flex;
+    }
+    &-social-link{
+        display: inline-block;
+        font-size: 3rem;
+        @include square(6rem);
+        padding: 1.7rem;
+        color: $primary-color;
+        background-color: $secondary-color;
+        transition: all 0.25s linear;
+    }
+    &-social-link:hover{
+        color: #fff;
+        background-color: $primary-color;
+    }
+    &-info{
+        height: calc(100% - var(--heigh-image));
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-name{
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $title-color;
+        margin-bottom: 1rem;
+        @include textClamp();
+    }
+    &-position{
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: italic;
+        color: $text-color;
+    }
+}
+
+@media screen and (max-width: 1279.98px) {
+    .team{
+        --heigh-image : 37rem;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .team{
+        --heigh-image : 30rem;
+        padding: 5rem 0;
+        &-social-link{
+            padding: 1rem;
+            font-size: 2.5rem;
+            @include square(4rem)
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .team{
+        --heigh-image : 30rem;
+        &-list{
+            grid-template-columns: repeat(3, 80%);
+            grid-auto-flow: column;
+            overflow-x: auto;
+            @include scrollHidden;
+            grid-gap: 0;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+        &-item{
+            width: 85%;
+            scroll-snap-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 374.98px) {
+    .team{
+        --heigh-image : 25rem;
+    }
+}
+
+

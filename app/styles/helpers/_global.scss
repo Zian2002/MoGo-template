@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+    font-family: $primary-font;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    color: $title-color;
+    font-size: 1.4rem;
+    font-family: $primary-font;
+}
+
+input, button{
+    font-family: $primary-font;
+    line-height: 1;
+    outline: none;
+}
+
+span{
+    font-family: $primary-font;
+}

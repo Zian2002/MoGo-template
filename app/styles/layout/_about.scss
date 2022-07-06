@@ -1,0 +1,50 @@
+.about {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 3rem;
+        margin-top: 9rem;
+    }
+    &-image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    @include hoverEffect(".about-item", ".about-content");
+    &-content{        
+        padding: 2rem;
+        .about-icon{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-title{
+            font-size: 1.8rem;
+            font-weight: bold;text-transform: uppercase;
+            @include textClamp;
+        }
+
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .about{
+        padding: 3.5rem 1rem;
+        &-list{
+            grid-template-columns: unset;
+            grid-auto-columns: 75%;
+            grid-auto-flow: column;
+            grid-row-gap: 3rem;
+            overflow-x: auto;
+            @include scrollHidden;
+            padding: 1rem 3rem;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+        }
+        &-item {
+            scroll-snap-align: center;
+        }
+    }
+}

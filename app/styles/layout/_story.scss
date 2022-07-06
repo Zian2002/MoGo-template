@@ -1,0 +1,139 @@
+.story{
+    padding: 11rem 0;
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 3rem;
+    }
+    &-media{
+        position: relative;
+        height: 24rem;
+    }
+    &-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-date{
+        position: absolute;
+        bottom: 1rem;
+        left: -1rem;
+        background-color: $third-color;
+        color: #fff;
+        padding: 1.5rem;
+        &-number{
+            font-weight: bold;
+            font-size: 3rem;
+            padding-bottom: 0.5rem;
+        }
+        &-text{
+            font-family: $secondary-font;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+    &-content{
+        border-bottom: 1px solid $gray-dark-color;
+        padding: 2rem 0;
+    }
+    &-title{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $title-color;
+        padding-bottom: 2rem;
+        @include textClamp(2);
+    }
+    &-desc{
+        font-family: $secondary-font;
+        font-size: 1.4rem;
+        color: $text-color;
+        line-height: 1.4;
+        @include textClamp(5);
+    }
+    &-meta{
+        margin-top: 2rem;
+        display: flex;
+    }
+    &-meta-item{
+        margin-right: 2rem;
+    }
+    &-meta-icon{
+        font-size: 1.7rem;
+        color: $third-color;
+        margin-right: 0.5rem;
+    }
+    &-meta-count{
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        font-style: italic;
+        color: $text-color;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .story{
+        padding: 6rem 0;
+        &-media{
+            height: 16rem;
+        }
+        &-date{
+            padding: 1rem;
+            &-number{
+                font-size: 2rem;
+            }
+            &-text{
+                font-size: 1.4rem;
+            }
+        }
+        &-content{
+            padding: 1rem 0;
+        }
+        &-title{
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .story{
+        &-list{
+            margin-top: 5rem;
+            display: block;
+        }
+        &-item{
+            margin-bottom: 5rem;
+        }
+        &-media{
+            height: 30rem;
+        }
+        &-date{
+            padding: 1.5rem;
+            &-number{
+                font-size: 2.5rem;
+            }
+            &-text{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374.98px) {
+    .story{
+        &-media{
+            height: 25rem;
+        }
+        &-date{
+            padding: 1rem;
+            &-number{
+                font-size: 2rem;
+            }
+            &-text{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+

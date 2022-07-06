@@ -1,0 +1,124 @@
+mixin menuLink(title= "", href="#")
+   li.header-menu-item 
+      a.header-menu-link(href= href)= title
+
+mixin headerBottomItem(number= "00", title= "")
+   .header-bottom-item 
+      span.header-bottom-number= number
+      span.header-bottom-text= title 
+
+mixin blockHead(caption= "", title= "", desc= "")
+   .block-head 
+      h3.block-head-caption= caption 
+      h2.block-head-title= title 
+      if desc
+         p.block-head-desc= desc
+
+mixin aboutItem(url, iconClasses, title)
+   .about-item 
+      img.about-image(src= url, alt="")
+      .about-content 
+         i.about-icon(class= iconClasses)
+         span.about-title= title 
+
+mixin numberItem(number, text)
+   .number-item  
+      h2.number-item-count= number 
+      span.number-item-text= text
+
+mixin serviceItem(url, title, desc)
+   .service-item 
+      img.service-item-image(src= url, alt="") 
+      .service-item-info 
+         h3.service-item-title= title 
+         p.service-item-desc= desc
+
+mixin wedoItem(url, title, content, active="")
+   .wedo-item
+      .wedo-item-header(class= active)
+         img.wedo-item-icon(src= url, alt="")
+         h3.wedo-item-title= title
+         i.fal.fa-angle-down.wedo-item-angle
+      .wedo-item-content
+         .wedo-item-inner= content
+
+mixin quoteItem(urlMedia, icon, desc, author)
+   .quote-item 
+      if icon == true
+         .quote-icon 
+            img.quote-image(src= urlMedia, alt="")
+      else 
+         .quote-media 
+            img.quote-image(src= urlMedia, alt="")
+      .quote-info 
+         p.quote-desc= desc
+         span.quote-author= author
+
+mixin socialItem(iconClass, url)
+   li.team-social-item
+      a.team-social-link(href= url)
+         i(class= iconClass)
+
+mixin teamItem(url, name, position)
+   .team-item 
+      .team-main 
+         .team-media
+            img.team-image(src= url, alt="")
+         .team-content
+            ul.team-social
+               if block 
+                  block
+      .team-info 
+         h3.team-name= name
+         span.team-position= position
+
+mixin workItem(urlImage, urlIcon, title, desc)
+   .work-item 
+      img.work-image(src= urlImage, alt="")
+      .work-content 
+         img.work-icon(src= urlIcon, alt="")
+         h3.work-title= title
+         p.work-desc= desc
+         
+mixin peopleItem(src, name, job, desc)
+   li.people-item  
+      img.people-image(src= src, alt="")
+      .people-info 
+         h3.people-name= name
+         p.people-job= job 
+         p.people-desc= desc
+
+mixin storyMedia(src, date, month)
+   .story-media 
+      img.story-image(src= src, alt="")
+      .story-date 
+         h2.story-date-number= date
+         p.story-date-text= month
+
+mixin storyContent(title, desc)
+   .story-content 
+      h3.story-title= title 
+      p.story-desc= desc
+
+mixin storyMeta(view, comment)
+   .story-meta 
+      .story-meta-item 
+         i.fa.fa-eye.story-meta-icon 
+         span.story-meta-count= view
+      .story-meta-item 
+         i.fa.fa-comment.story-meta-icon 
+         span.story-meta-count= comment
+
+mixin footerSocialItem(iconClass, href)
+   li.footer-social-item 
+         a.footer-social-link(href= href)
+            i.footer-social-icon(class= iconClass)
+
+mixin footerBlog(href, urlImage, title, date)
+   a.footer-blog(href= href)  
+      img.footer-blog-image(src= urlImage, alt="")
+      .footer-blog-content 
+            h4.footer-blog-title= title 
+            p.footer-blog-date= date
+   
+

@@ -1,0 +1,128 @@
+.quote{
+    background-color: $gray-color;
+    &-list{
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+    }
+    &-angle{
+        font-size: 4rem;
+        color: $gray-dark-color;
+        padding: 2.5rem;
+        cursor: pointer;
+    }
+    &-item{
+        padding: 6.5rem 11rem;
+        display: flex;
+        align-items: center
+    }
+    &-icon{
+        @include square(15rem);
+        @include flexCenter;
+        border: 3px solid $third-color;
+        flex-shrink: 0;
+        margin-right: 6rem;
+    }
+    &-media{
+        @include square(21rem);
+        border-radius: 50%;
+        margin-right: 3rem;
+        flex-shrink: 0;
+        overflow: hidden;
+        .quote-image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    &-desc{
+        font-family: $secondary-font;
+        font-size: 2.4rem;
+        font-style: italic;
+        font-weight: 300;
+        color: $text-color;
+        line-height: 1.6;
+        text-indent: 3px;
+        margin-bottom: 2rem;
+    }
+    &-author{
+        font-family: $third-font;
+        font-size: 2.4rem;
+        position: relative;
+        padding-left: 8.5rem;
+    }
+    &-author::before{
+        content: "";
+        position: absolute;
+        @include square(6rem, 5px);
+        @include absoluteCenter("left");
+        background-color: $primary-color;
+    }
+
+    .slick-initialized .slick-slide {
+        display: flex;
+    }
+    .slick-arrow {
+        border: 0;
+        background-color: transparent;
+        z-index: 2;
+    }
+    .slick-prev{
+        @include absoluteCenter("left");
+    }
+    .slick-next{
+        @include absoluteCenter("right");
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .quote{
+        &-angle{
+            padding: 1rem;
+        }
+        &-item{
+            padding: 3rem 4rem;
+        }
+        &-media{
+            @include square(17rem);
+        }
+        &-icon{
+            @include square(8rem);
+            margin-right: 4rem;
+        }
+        &-image{
+            @include square(70%);
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .quote{
+        &-angle{
+            font-size: 2rem;
+        }
+        &-item{
+            flex-direction: column;
+            padding: 3rem 0;
+        }
+        &-media{
+            @include square(10rem);
+            margin-bottom: 2rem;
+        }
+        &-icon{
+            margin-bottom: 2rem;
+            margin-right: 0;
+        }
+        &-desc{
+            font-size: 1.6rem;
+        }
+        &-author{
+            font-size: 2rem;
+            padding-left: 5.5rem;
+        }
+        &-author::before{
+            @include square(4rem, 3px);
+        }
+    }
+}

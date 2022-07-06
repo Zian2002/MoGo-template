@@ -1,0 +1,17 @@
+.brand{
+    background-color: $gray-color;
+    padding: 7rem 0.5rem;
+}
+
+@media screen and (max-width: 1023.98px) {
+    .brand{
+        padding: 5rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .brand{
+        padding: 3rem 0.5rem;
+    }
+
+}

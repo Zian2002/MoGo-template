@@ -1,0 +1,35 @@
+.map{
+    background: linear-gradient(to bottom, rgba(#fff, 0.8), rgba(#fff, 0.8)), url("../images/img-map.png") no-repeat center / cover;
+    padding: 5.5rem 0;
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &-heading{
+        font-size: 2.4rem;
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 2rem 0;
+        position: relative;
+    }
+    &-heading::before{
+        content: "";
+        position: absolute;
+        @include square(6rem, 4px);
+        background-color: $primary-color;
+        @include absoluteCenter("bottom");
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .map{
+        padding: 3.5rem 0;
+        &-heading{
+            font-size: 2rem;
+            padding-top: 1.5rem;
+        }
+    }
+}

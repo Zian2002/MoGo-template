@@ -1,0 +1,93 @@
+.people{
+    background: linear-gradient(to bottom, rgba(#fff, 0.9), rgba(#fff, 0.9)), url(../images/img-people-bg.png) no-repeat center / cover;
+    padding: 10rem 0 12rem;
+    &-list{
+        padding-top: 4.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin-top: -7rem;
+    }
+    &-item{
+        padding: 0 3.5rem;
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 7rem;
+    }
+    &-image{
+        @include square(11.5rem);
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 3rem;
+    }
+    &-name{
+        color: $title-color;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 1rem 0;
+    }
+    &-job{
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 300;
+    }
+    &-job::before{
+        content: "";
+        @include square(6rem, 4px);
+        border-radius: 2px;
+        background-color: $primary-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &-desc{
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        color: $text-color;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .people{
+        padding: 7rem 0;
+        &-list{
+            display: block;
+        }
+        &-item{
+            width: 100%;
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .people{
+        &-list{
+            padding-top: 7rem;
+        }
+        &-item{
+            padding: 0;
+            margin-top: 3rem;
+        }
+        &-image{
+            @include square(8rem);
+            margin-right: 1rem;
+        }
+        &-job{
+            margin-bottom: 1rem;
+            padding-bottom: 1.5rem;
+        }
+        &-job::before{
+            @include square(4rem, 3px);
+        }
+    }
+}
+
