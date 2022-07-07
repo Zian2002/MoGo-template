@@ -109,6 +109,7 @@
         &-media{
             @include square(10rem);
             margin-bottom: 2rem;
+            margin-right: 0;
         }
         &-icon{
             margin-bottom: 2rem;

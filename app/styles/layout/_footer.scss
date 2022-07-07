@@ -88,6 +88,7 @@
             border: 1px solid $gray-dark-color;
             border-right: 0;
             width: 100%;
+            border-radius: 0;
         }
         &-button{
             padding: 1.2rem 3.5rem;
@@ -97,6 +98,7 @@
             font-weight: bold;
             color: #fff;
             cursor: pointer;
+            border-radius: 0;
         }
 
     }

@@ -283,7 +283,8 @@ span {
     position: relative;
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    z-index: 1; }
+    z-index: 1;
+    will-change: true; }
     .about .about-item:hover .about-content {
       opacity: 1;
       visibility: visible; }
@@ -686,7 +687,8 @@ span {
   .quote-media {
     width: 10rem;
     height: 10rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    margin-right: 0; }
   .quote-icon {
     margin-bottom: 2rem;
     margin-right: 0; }
@@ -706,7 +708,8 @@ span {
     position: relative;
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    z-index: 1; }
+    z-index: 1;
+    will-change: true; }
     .team .team-main:hover .team-content {
       opacity: 1;
       visibility: visible; }
@@ -881,7 +884,8 @@ span {
     position: relative;
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    z-index: 1; }
+    z-index: 1;
+    will-change: false; }
     .work .work-item:hover .work-content {
       opacity: 1;
       visibility: visible; }
@@ -1376,7 +1380,8 @@ span {
     font-style: italic;
     border: 1px solid #cccccc;
     border-right: 0;
-    width: 100%; }
+    width: 100%;
+    border-radius: 0; }
   .footer-form-button {
     padding: 1.2rem 3.5rem;
     background-color: #95e1d3;
@@ -1384,7 +1389,8 @@ span {
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 0; }
 
 .footer-blog {
   display: -webkit-box;
