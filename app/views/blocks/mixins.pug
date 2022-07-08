@@ -120,5 +120,11 @@ mixin footerBlog(href, urlImage, title, date)
       .footer-blog-content 
             h4.footer-blog-title= title 
             p.footer-blog-date= date
-   
+
+mixin footerBlog2(data)
+   a.footer-blog(href= data.href)  
+      img.footer-blog-image(src= data.srcImage, alt="")
+      .footer-blog-content 
+            h4.footer-blog-title= data.title 
+            p.footer-blog-date= data.date
 
